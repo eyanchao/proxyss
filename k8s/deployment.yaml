@@ -6,15 +6,15 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ray
+      app: web
   template:
     metadata:
       labels:
-        app: ray
+        app: web
     spec:
       containers:
       - image: okteto.dev/ray:latest
-        name: ray
+        name: web
         ports:
         - containerPort: 8080
         env:
